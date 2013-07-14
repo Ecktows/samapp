@@ -1,0 +1,128 @@
+@import "bootstrap";
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+	background: -moz-linear-gradient(#bbb, #eee);
+    background: -ms-linear-gradient(#bbb, #eee);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bbb), color-stop(100%, #eee));
+    background: -webkit-linear-gradient(#bbb, #eee);
+    background: -o-linear-gradient(#bbb, #eee);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbb', endColorstr='#eee');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbb', endColorstr='#eee')";
+    background: linear-gradient(#bbb, #eee);
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #999;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+background-image: -moz-linear-gradient(#09F,#eee);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#09F), to(#eee));
+	background-image: -webkit-linear-gradient(#09F, #eee);
+	background-image: -o-linear-gradient(#09F, #eee);
+	background-image: -ms-linear-gradient(#09F, #eee);
+	background-image: linear-gradient(#09F, #eee);
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* footer */
+
+footer {
+  	height: 40px;
+	width: 945px;
+	border-bottom-left-radius: 25px 50px;
+	border-bottom-right-radius: 25px 50px;
+	background-color: #09F;
+	margin-top: 20px;
+	float: left;
+	margin: 0px;
+	padding: 5px;
+	background-image: -moz-linear-gradient(#09F,#eee);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#09F), to(#eee));
+	background-image: -webkit-linear-gradient(#09F, #eee);
+	background-image: -o-linear-gradient(#09F, #eee);
+	background-image: -ms-linear-gradient(#09F, #eee);
+	background-image: linear-gradient(#09F, #eee);
+}
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  color: #03F;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
