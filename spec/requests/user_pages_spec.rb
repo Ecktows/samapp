@@ -54,10 +54,18 @@ describe "User pages" do
 
   describe "profile page" do
     let(:user) { FactoryGirl.create(:user) }
+    let!(:m1) { FactoryGirl.create(:micropost, user: user, content: "Foo") }
+    let!(:m2) { FactoryGirl.create(:micropost, user: user, content: "Bar") }
     before { visit user_path(user) }
 
     it { should have_content(user.name) }
     it { should have_title(user.name) }
+   
+    describe "microposts" do
+      it { should have_content(m1.content) }
+      it { should have_content(m2.content) }
+      it { should have_content(user.microposts.count) }
+    end
   end
 
   describe "signup page" do
@@ -80,14 +88,14 @@ describe "User pages" do
   describe "with valid information" do
       before do
         fill_in "Name",         with: "jo"
-        fill_in "Email",        with: "jo@gmail.com"
-        fill_in "Password",     with: "foobar"
-        fill_in "Confirmation", with: "foobar"
+        fill_in "Email",        with: "user@example.com"
+        fill_in "Password",     with: "jo12345"
+        fill_in "Confirm Password", with: "jo12345"
       end
       
       describe "after saving the user" do
         before { click_button submit }
-        let(:user) { User.find_by(email: 'jo@gmail.com') }
+        let(:user) { User.find_by(email: 'user@example.com') }
 
         it { should have_link('Sign out') }
         it { should have_title(user.name) }
@@ -106,7 +114,19 @@ describe "User pages" do
     before do
       sign_in user
       visit edit_user_path(user)
+  end
+
+
+    describe "forbidden attributes" do
+      let(:params) do
+        { user: { admin: true, password: user.password,
+                  password_confirmation: user.password } }
+      end
+      before { patch user_path(user), params }
+      specify { expect(user.reload).not_to be_admin }
     end
+
+    
 
     describe "page" do
       it { should have_content("Update your profile") }
