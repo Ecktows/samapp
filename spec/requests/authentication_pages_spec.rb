@@ -7,14 +7,6 @@ describe "Authentication" do
   describe "signin page" do
     before { visit signin_path }
 
-    it { should have_content('Sign in') }
-    it { should have_title('Sign in') }
-  end
-
-
-  describe "signin page" do
-    before { visit signin_path }
-
   describe "with valid information" do
          let(:user) { FactoryGirl.create(:user) }
          before do
@@ -31,6 +23,13 @@ describe "Authentication" do
      end
     end
    end
+
+  describe "signin page" do
+    before { visit signin_path }
+
+    it { should have_content('Sign in') }
+    it { should have_title('Sign in') }
+  end
 
    describe "after visiting another page" do
       before { click_link "Home" }
@@ -67,9 +66,7 @@ describe "Authentication" do
     end
 
     describe "for non-signed-in users" do
-
-
-    let(:user) { FactoryGirl.create(:user) }
+      let(:user) { FactoryGirl.create(:user) }
 
       describe "when attempting to visit a protected page" do
         before do
@@ -79,6 +76,28 @@ describe "Authentication" do
           click_button "Sign in"
         end
        
+       describe "in the Relationships controller" do
+        describe "submitting to the create action" do
+          before { post relationships_path }
+          specify { expect(response).to redirect_to(signin_path) }
+        end
+
+        describe "submitting to the destroy action" do
+          before { delete relationship_path(1) }
+          specify { expect(response).to redirect_to(signin_path) }
+        end
+      end
+
+       describe "visiting the following page" do
+          before { visit following_user_path(user) }
+          it { should have_title('Sign in') }
+        end
+
+        describe "visiting the followers page" do
+          before { visit followers_user_path(user) }
+          it { should have_title('Sign in') }
+        end
+
        describe "in the Microposts controller" do
 
         describe "submitting to the create action" do

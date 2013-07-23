@@ -48,7 +48,8 @@ it "should have the right links on the layout" do
 
     it { should have_content('contact') }
     it { should have_title(full_title('contact')) }
-describe "for signed-in users" do
+
+  describe "for signed-in users" do
       let(:user) { FactoryGirl.create(:user) }
       before do
         FactoryGirl.create(:micropost, user: user, content: "Lorem ipsum")
@@ -62,6 +63,17 @@ describe "for signed-in users" do
           expect(page).to have_selector("li##{item.id}", text: item.content)
         end
       end
+
+      describe "follower/following counts" do
+        let(:other_user) { FactoryGirl.create(:user) }
+        before do
+          other_user.follow!(user)
+          visit root_path
+        end
+
+        it { should have_link("0 following", href: following_user_path(user)) }
+        it { should have_link("1 followers", href: followers_user_path(user)) }
+      end
     end  
-end
+  end
 end
