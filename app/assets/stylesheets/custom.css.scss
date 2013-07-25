@@ -90,14 +90,14 @@ html {
 
 body {
   padding-top: 60px;
-	background: -moz-linear-gradient(#bbb, #eee);
-    background: -ms-linear-gradient(#bbb, #eee);
+	background: -moz-linear-gradient(#eee);
+    background: -ms-linear-gradient(#eee);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bbb), color-stop(100%, #eee));
-    background: -webkit-linear-gradient(#bbb, #eee);
-    background: -o-linear-gradient(#bbb, #eee);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbb', endColorstr='#eee');
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbb', endColorstr='#eee')";
-    background: linear-gradient(#bbb, #eee);
+    background: -webkit-linear-gradient(#eee);
+    background: -o-linear-gradient(#eee);
+    filter: progid:DXImageTransform.Microsoft.gradient(endColorstr='#eee');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(endColorstr='#eee')";
+    background: linear-gradient(#eee);
 }
 
 section {
