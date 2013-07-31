@@ -26,20 +26,18 @@
   </div>
 <% else %>
 <div class="center hero-unit">
-<<<<<<< HEAD
-<%= render 'layouts/nav' %>
-=======
-  <h1>Welcome to MyBlog application</h1>
+  <h1>Welcome to the Samapp</h1>
 
   <h2>
-    This is the home page for the MyBlog application.
+    This is the home page for the
+    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+    sample application.
   </h2>
 
   <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
->>>>>>> 12599856ef3c45753538ed22013bb3fa9dceb20c
 </div>
 
-
+<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
 <% end %>
 </body>
 </html>

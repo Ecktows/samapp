@@ -101,11 +101,22 @@ background-repeat: no-repeat;
 
 body {
   padding-top: 60px;
+<<<<<<< HEAD
   background:url('background.gif');
   height:100%;
   
   
   
+=======
+	background: -moz-linear-gradient(#eee);
+    background: -ms-linear-gradient(#eee);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bbb), color-stop(100%, #eee));
+    background: -webkit-linear-gradient(#eee);
+    background: -o-linear-gradient(#eee);
+    filter: progid:DXImageTransform.Microsoft.gradient(endColorstr='#eee');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(endColorstr='#eee')";
+    background: linear-gradient(#eee);
+>>>>>>> 12599856ef3c45753538ed22013bb3fa9dceb20c
 }
 
 section {
@@ -180,6 +191,10 @@ color: #fff
   letter-spacing: -1px;
   padding-top: 5px;
   font-weight: bold;
+<<<<<<< HEAD
+=======
+  line-height: 1;
+>>>>>>> 12599856ef3c45753538ed22013bb3fa9dceb20c
 }
 #logo a{
   
