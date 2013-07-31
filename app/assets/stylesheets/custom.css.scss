@@ -1,6 +1,6 @@
 @import "bootstrap";
 
-$grayMediumLight: #eaeaea;
+$grayMediumLight: #fff;
 
 
 
@@ -26,15 +26,17 @@ $grayMediumLight: #eaeaea;
 aside {
   section {
     padding: 10px 0;
-    border-top: 1px solid $grayLighter;
+    border-top: 1px solid ;
     &:first-child {
       border: 0;
       padding-top: 0;
+      color: #fff;
     }
     span {
       display: block;
       margin-bottom: 3px;
       line-height: 1;
+      color: #fff;
     }
 
  .stats {
@@ -42,15 +44,16 @@ aside {
   a {
     float: left;
     padding: 0 10px;
-    border-left: 1px solid $grayLighter;
-    color: gray;
+    color: white;
     &:first-child {
       padding-left: 0;
       border: 0;
+      color: #fff
+	
     }
     &:hover {
       text-decoration: none;
-      color: $blue;
+      color: #fff;
     }
   }
   strong {
@@ -71,6 +74,7 @@ aside {
       letter-spacing: -1px;
       margin-bottom: 3px;
       margin-top: 0px;
+      color: #fff
     }
   }
 }
@@ -88,38 +92,44 @@ html {
   overflow-y: scroll;
 }
 
+.handimage{
+background-image: url(hand.gif);
+width: 400px;
+height: 300px;
+background-repeat: no-repeat;
+}
+
 body {
   padding-top: 60px;
-	background: -moz-linear-gradient(#bbb, #eee);
-    background: -ms-linear-gradient(#bbb, #eee);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bbb), color-stop(100%, #eee));
-    background: -webkit-linear-gradient(#bbb, #eee);
-    background: -o-linear-gradient(#bbb, #eee);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbb', endColorstr='#eee');
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbb', endColorstr='#eee')";
-    background: linear-gradient(#bbb, #eee);
+  background:url('background.gif');
+  height:100%;
+  
+  
+  
 }
 
 section {
   overflow: auto;
+
 }
 
 textarea {
   resize: vertical;
+
+  
 }
 
 .center {
+  height: 500px;
   text-align: center;
+  background:url('background.gif')
+  
 }
 
 .center h1 {
   margin-bottom: 10px;
+
 }
-
-
-
-
-
 
 
 
@@ -127,6 +137,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  color: #fff;
 }
 
 h1 {
@@ -134,6 +145,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color: #fff;
 }
 
 h2 {
@@ -142,53 +154,194 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #999;
+  color: #fff;
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+color: #fff
 }
-
-
-
-
-
-
 
 
 /* header */
-
+.header{
+        height: 30px;
+	width: 100%;
+	padding-top: 10px;
+         background-color: #000;
+        
+}
 #logo {
   float: left;
-  margin-right: 10px;
+  margin-left: 5px;
   font-size: 1.7em;
   color: #fff;
-  text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding-top: 5px;
   font-weight: bold;
-  line-height: 1;
-background-image: -moz-linear-gradient(#09F,#eee);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#09F), to(#eee));
-	background-image: -webkit-linear-gradient(#09F, #eee);
-	background-image: -o-linear-gradient(#09F, #eee);
-	background-image: -ms-linear-gradient(#09F, #eee);
-	background-image: linear-gradient(#09F, #eee);
 }
-
+#logo a{
+  
+}
 #logo:hover {
-  color: #fff;
+  color: #0ff;
   text-decoration: none;
 }
 
+/*navbar*/
+.fancyNav{
+	/* Affects the UL element */
+	overflow: hidden;
+	display: inline-block;
+}
+
+.fancyNav li{
+	/* Specifying a fallback color and we define CSS3 gradients for the major browsers: */
+	
+	background-color: #f0f0f0;
+	background-image: -webkit-gradient(linear,left top, left bottom,from(#fefefe), color-stop(0.5,#f0f0f0), color-stop(0.51, #e6e6e6));
+	background-image: -moz-linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
+	background-image: -o-linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
+	background-image: -ms-linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
+	background-image: linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
+	
+	border-right: 1px solid rgba(9, 9, 9, 0.125);
+	
+	/* Adding a 1px inset highlight for a more polished efect: */
+	
+	box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+	-moz-box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+	-webkit-box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+	
+	position:relative;
+	
+	float: left;
+	list-style: none;
+}
+
+.fancyNav li:after{
+
+	/* This creates a pseudo element inslide each LI */	
+	
+	content:'.';
+	text-indent:-9999px;
+	overflow:hidden;
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	z-index:1;
+	opacity:0;
+	
+	/* Gradients! */
+	
+	background-image:-webkit-gradient(linear, left top, right top, from(rgba(168,168,168,0.5)),color-stop(0.5,rgba(168,168,168,0)), to(rgba(168,168,168,0.5)));
+	background-image:-moz-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+	background-image:-o-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+	background-image:-ms-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+	background-image:linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+	
+	/* Creating borders with box-shadow. Useful, as they don't affect the size of the element. */
+	
+	box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff,1px 0 0 #a3a3a3,2px 0 0 #fff;
+	-moz-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff,1px 0 0 #a3a3a3,2px 0 0 #fff;
+	-webkit-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff,1px 0 0 #a3a3a3,2px 0 0 #fff;
+	
+	/* This will create a smooth transition for the opacity property */
+	
+	-moz-transition:0.25s all;
+	-webkit-transition:0.25s all;
+	-o-transition:0.25s all;
+	transition:0.25s all;
+}
+
+/* Treating the first LI and li:after elements separately */
+
+.fancyNav li:first-child{
+	border-radius: 4px 0 0 4px;
+}
+
+.fancyNav li:first-child:after,
+.fancyNav li.selected:first-child:after{
+	box-shadow:1px 0 0 #a3a3a3,2px 0 0 #fff;
+	-moz-box-shadow:1px 0 0 #a3a3a3,2px 0 0 #fff;
+	-webkit-box-shadow:1px 0 0 #a3a3a3,2px 0 0 #fff;
+	
+	border-radius:4px 0 0 4px;
+}
+
+.fancyNav li:last-child{
+	border-radius: 0 4px 4px 0;
+}
+
+/* Treating the last LI and li:after elements separately */
+
+.fancyNav li:last-child:after,
+.fancyNav li.selected:last-child:after{
+	box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff;
+	-moz-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff;
+	-webkit-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff;
+	
+	border-radius:0 4px 4px 0;
+}
+
+.fancyNav li:hover:after,
+.fancyNav li.selected:after,
+.fancyNav li:target:after{
+	/* This property triggers the CSS3 transition */
+	opacity:1;
+}
+
+.fancyNav:hover li.selected:after,
+.fancyNav:hover li:target:after{
+	/* Hides the targeted li when we are hovering on the UL */
+	opacity:0;
+}
+
+.fancyNav li.selected:hover:after,
+.fancyNav li:target:hover:after{
+	opacity:1 !important;
+}
+
+/* Styling the anchor elements */
+
+.fancyNav li a{
+	color: #5d5d5d;
+	display: inline-block;
+	font: 14px/1 Lobster,Arial,sans-serif;
+	padding: 12px 35px 14px;
+	position: relative;
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+	z-index:2;
+	text-decoration:none !important;
+	white-space:nowrap;
+}
+
+.fancyNav a.homeIcon{
+	background:url('../img/home.png') no-repeat center center;
+	display: block;
+	overflow: hidden;
+	padding-left: 12px;
+	padding-right: 12px;
+	text-indent: -9999px;
+	width: 16px;
+}
 
 
+nav{
+	display: block;
+	margin-left: auto;
+        margin-right: auto;
+	text-align: center;
+	width: 800px;
+}
 /* forms */
 
 
 #error_explanation {
-  color: #f00;
+  color: #fff;
   ul {
     list-style: none;
     margin: 0 0 18px 0;
@@ -198,10 +351,11 @@ background-image: -moz-linear-gradient(#09F,#eee);
 .field_with_errors {
   @extend .control-group;
   @extend .error;
+color: #fff
 }
 
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
+  border: 1px solid #fff;
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -210,6 +364,7 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
+
 }
 
 
@@ -223,7 +378,7 @@ input {
     padding: 10px 0;
     border-top: 1px solid $grayLighter;
     &:last-child {
-      border-bottom: 1px solid $grayLighter;
+    border-bottom: 1px solid $grayLighter;
     }
   }
 }
@@ -236,14 +391,15 @@ input {
 
   li {
     padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
+    border-top: 1px solid #fff;
+color: #fff
   }
 }
 .content {
   display: block;
 }
 .timestamp {
-  color: $grayLight;
+  
 }
 .gravatar {
   float: left;
@@ -264,28 +420,23 @@ footer {
 	width: 945px;
 	border-bottom-left-radius: 25px 50px;
 	border-bottom-right-radius: 25px 50px;
-	background-color: #09F;
 	margin-top: 20px;
 	float: left;
 	margin: 0px;
 	padding: 5px;
-	background-image: -moz-linear-gradient(#09F,#eee);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#09F), to(#eee));
-	background-image: -webkit-linear-gradient(#09F, #eee);
-	background-image: -o-linear-gradient(#09F, #eee);
-	background-image: -ms-linear-gradient(#09F, #eee);
-	background-image: linear-gradient(#09F, #eee);
+	
 }
 footer a {
   color: #fff;
 }
 
 footer a:hover {
-  color: #03F;
+  color: #fff;
 }
 
 footer small {
   float: left;
+color: #fff;
 }
 
 footer ul {

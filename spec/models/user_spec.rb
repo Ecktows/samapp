@@ -43,7 +43,7 @@ describe User do
   it { should respond_to(:follow!) }
   it { should respond_to(:unfollow!) }
   
-  describe "with admin attribute set to 'true'" do
+  describe "with admin attribute set to 'false'" do
     before do
       @user.save!
       @user.toggle!(:admin)
